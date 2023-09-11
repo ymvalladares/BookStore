@@ -1,0 +1,16 @@
+.card {
+  transition: 0.75s all ease-in-out;
+  margin: 30px;
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+.card_badge {
+  position: absolute;
+  top: -10px;
+  left: -25px;
+  color: white;
+  transform: rotate(-30deg);
+}

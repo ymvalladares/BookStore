@@ -1,0 +1,21 @@
+.bg {
+  background-image: url(../Photos/login.avif);
+  background-size: cover;
+  background-position: center;
+}
+
+/* .ojo {
+  margin-right: 0px;
+} */
+
+.input-wrapper {
+  position: relative;
+}
+
+.input-icon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-weight: bold;
+}

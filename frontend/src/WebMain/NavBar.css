@@ -1,0 +1,32 @@
+/* img {
+  border: 2px solid white;
+  display: inline;
+}
+p {
+  font-size: 0.9rem;
+}
+.ajuste {
+  margin-top: -12px;
+  color: white;
+}
+
+.badge {
+  background-color: #b94517;
+  padding: 0.25rem 1rem;
+  border-radius: 25px;
+  font-weight: bold;
+} */
+
+/* .ajusteNavbar {
+  height: 50px;
+}
+@media screen and (max-width: 768px) {
+  .ajusteNavbar {
+  }
+} */
+
+@media screen and (max-width: 768px) {
+  .dropdownMove {
+    align: "end";
+  }
+}

@@ -1,0 +1,22 @@
+.page_404 {
+  padding: 40px 0;
+  background: #fff;
+  font-family: "Poppins";
+}
+
+.four_zero_four_bg {
+  background: url("https://bit.ly/3mWf2a5");
+  background-position: center;
+  background-size: cover;
+  height: 480px;
+}
+h1 {
+  font-size: 80px;
+}
+h3 {
+  font-size: 80px;
+}
+
+.content_box_404 {
+  margin-top: -50px;
+}

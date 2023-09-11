@@ -1,0 +1,77 @@
+﻿@using WebApplication1.Dto
+
+@model OrderVM
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div style='width:100%; text-align:center'>
+    <h2>Customer copy</h2>
+    <h2>Welcome to Bulky Book web</h2>
+    @if (@Model.OrderHeader != null)
+                {
+                   <h2> Invoice No: @Model.OrderHeader.Id & Invoice Date: @Model.OrderHeader.OrderDate</h2>
+                   <h3> Customer : @Model.OrderHeader.Name </h3>
+                   <p> @Model.OrderHeader.StreetAddress, @Model.OrderHeader.City, @Model.OrderHeader.State</p>
+                   <h3 style='margin-bottom:20px'> Contact: @Model.OrderHeader.PhoneNumber </h3>
+                }
+</div>
+
+<table style ='width:100%; border: 1px solid #000'>
+        <thead style='font-weight:bold'>
+            <tr>
+              <td style='border:1px solid #000'> Title </td>
+              <td style='border:1px solid #000'> Author </td>
+              <td style='border:1px solid #000'>Qty</td>
+              <td style='border:1px solid #000'>Price</td >
+              <td style='border:1px solid #000'>Payment</td>
+              <td style='border:1px solid #000'>Total</td>
+            </tr>
+        </thead>
+
+          <tbody>
+
+                @foreach(var item in Model.OrderDetails)
+                {
+                    <tr>
+                        <td> @item.Product.Title</td>
+                        <td> @item.Product.Author </td>
+                        <td> @item.Count </td>
+                        <td> @item.Price </td>
+                        <td> @item.OrderHeader.PaymentStatus </td>
+                        <td> @(item.Count * item.Price) </td>
+                    </tr>
+                }
+          </tbody>
+</table>
+                        <div> 
+                            <div style='text-align:right'>
+                                <h1> Summary Info </h1>
+                                <table style='border:1px solid #000;float:right' >
+                                    <thead style='font-weight:bold'>
+                                        <tr>
+                                            <td style='border:1px solid #000'>Order Total</td>
+                                            <td style='border:1px solid #000'> Tax </td>
+                                            <td style='border:1px solid #000'>Net Total</td>
+                                        </tr>
+                                    </thead >
+                                    <tbody>
+                                        <tr>
+                                            <td> @Model.OrderHeader.OrderTotal</td>
+                                            <td> 5% </td>
+                                            <td> @(Model.OrderHeader.OrderTotal - (Model.OrderHeader.OrderTotal * 5/100))</td>
+                                        </tr>
+                                    </tbody>
+                                 </table>
+                            </div>
+                        </div>
+
+          <div>
+                        
+             <p style='font-weight:bold'>Customer attention: 9045673498</p>  
+             <p style='font-weight:bold'>Our Email: customerbulki@gmail.com</p>
+             <p style='font-weight:bold'>Direction: 4132 Manhatan New York, 65432</p>
+             <p style='font-weight:bold'>Come back soon!!!!</p>
+                
+             <p style='font-weight:bold'>Thank you for shopping in Bulki Book!!!!</p>
+          </div> 

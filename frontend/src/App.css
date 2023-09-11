@@ -1,0 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Itim&family=Merriweather&display=swap");
+body,
+html {
+  overflow-x: hidden;
+  font-family: "Itim", cursive;
+  font-family: "Merriweather", serif;
+}
